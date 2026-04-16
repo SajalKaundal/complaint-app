@@ -1,0 +1,40 @@
+.merge-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--f-color-overlay-darker);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.merge-container {
+  width: 100%;
+  max-width: 500px;
+  padding: 32px;
+  border-radius: var(--f-radius);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.merge-container .description {
+  color: var(--f-color-black-50);
+}
+
+.merge-select {
+  margin-top: 16px;
+  margin-bottom: 24px;
+}
+
+.merge-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  border-top: 1px solid var(--f-color-ui-20);
+  padding-top: 24px;
+}

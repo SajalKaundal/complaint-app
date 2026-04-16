@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap');
+
+:root {
+  /* Primary */
+  --f-color-accent-100: #DA291C; /* Ferrari Red */
+  --f-color-ui-0: #FFFFFF;       /* Pure White */
+  
+  /* Secondary & Accent */
+  --f-color-accent-90: #B01E0A;  /* Dark Red */
+  --f-color-accent-80: #9D2211;  /* Deep Red */
+  --f-color-yellow-hypersail: #FFF200; /* Racing Yellow */
+  --f-color-yellow: #F6E500;     /* Modena Yellow */
+
+  /* Surface & Background */
+  --f-color-bg-dark: #000000;    /* Absolute Black */
+  --f-color-ui-90: #303030;      /* Dark Surface */
+  --f-color-ui-20: #D2D2D2;      /* Light Gray Surface */
+  --f-color-overlay-darker: hsla(0, 0%, 7%, 0.8);
+
+  /* Neutrals & Text */
+  --f-color-black: #181818;      /* Near Black */
+  --f-color-black-60: #666666;   /* Dark Gray */
+  --f-color-black-50: #8F8F8F;   /* Mid Gray */
+  --f-color-black-55: #969696;   /* Silver Gray */
+  --f-color-border: #CCCCCC;     /* Border Gray */
+
+  /* Semantic */
+  --f-color-accessible-warning: #F13A2C;
+  --f-color-accessible-success: #03904A;
+  --f-color-accessible-info: #4C98B9;
+  --f-color-link-hover: #3860BE;
+
+  /* Layout Variables */
+  --header-height: 80px;
+
+  /* Base Radii & Constraints */
+  --f-radius: 2px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  color: var(--f-color-black);
+  background-color: var(--f-color-ui-0); /* Default to white editorial surface */
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Typography Classes */
+.t-section-title {
+  font-size: 1.63rem;
+  font-weight: 500;
+  line-height: 1.20;
+}
+.t-card-heading {
+  font-size: 1.50rem;
+  font-weight: 400;
+}
+.t-subheading {
+  font-size: 1.13rem;
+  font-weight: 700;
+  line-height: 1.20;
+}
+.t-ui-heading {
+  font-size: 1.00rem;
+  font-weight: 500;
+  line-height: 1.40;
+  letter-spacing: 0.08px;
+}
+.t-body-bold {
+  font-size: 1.00rem;
+  font-weight: 700;
+  line-height: 1.30;
+}
+/* Structural Annotation (Body-Font substitute) */
+.t-label-upper {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1.27;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.t-micro-label {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.69rem;
+  font-weight: 400;
+  line-height: 1.27;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* Base Surfaces */
+.bg-dark {
+  background-color: var(--f-color-bg-dark);
+  color: var(--f-color-ui-0);
+}
+.bg-light {
+  background-color: var(--f-color-ui-0);
+  color: var(--f-color-black);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.2s ease;
+}
+a:hover {
+  color: var(--f-color-link-hover);
+}

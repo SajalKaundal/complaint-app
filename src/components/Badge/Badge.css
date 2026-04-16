@@ -1,0 +1,37 @@
+.badge {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: var(--f-radius);
+  border: 1px solid currentColor;
+}
+
+/* Priority status */
+.badge-high {
+  color: var(--f-color-accent-100);
+}
+.badge-medium {
+  color: #B2A200; /* Darker yellow for visibility on white */
+}
+.badge-low {
+  color: var(--f-color-black-50);
+}
+
+/* Progress status */
+.badge-pending {
+  color: var(--f-color-black-55);
+}
+.badge-in { /* In Progress */
+  color: var(--f-color-accessible-info);
+}
+.badge-resolved {
+  color: var(--f-color-accessible-success);
+}
+.badge-critical {
+  color: var(--f-color-bg-dark);
+  background-color: var(--f-color-accessible-warning);
+  border-color: var(--f-color-accessible-warning);
+}
+.badge-escalated {
+  color: var(--f-color-accessible-warning);
+  border-color: var(--f-color-accessible-warning);
+}

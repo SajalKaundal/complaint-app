@@ -1,0 +1,90 @@
+.site-header {
+  background-color: var(--f-color-bg-dark);
+  color: var(--f-color-ui-0);
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0 40px;
+}
+
+.header-content {
+  width: 100%;
+  max-width: 1280px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.logo-box {
+  width: 42px;
+  height: 44px;
+  background-color: var(--f-color-bg-dark); /* Absolute black box for logo */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--f-color-ui-0);
+}
+
+.dummy-horse {
+  font-size: 24px;
+}
+
+.brand-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.13px;
+  color: var(--f-color-ui-0);
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.nav-link {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.13px;
+  color: var(--f-color-ui-0);
+  text-transform: uppercase;
+}
+
+.nav-divider {
+  color: var(--f-color-black-60);
+}
+
+.user-controls {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.user-info {
+  color: var(--f-color-black-50);
+}
+
+.role-toggle {
+  background: none;
+  border: 1px solid var(--f-color-border);
+  color: var(--f-color-ui-0);
+  padding: 4px 8px;
+  cursor: pointer;
+  background-color: transparent;
+  transition: all 0.2s;
+  border-radius: var(--f-radius);
+}
+
+.role-toggle:hover {
+  background-color: var(--f-color-link-hover);
+  border-color: var(--f-color-link-hover);
+}

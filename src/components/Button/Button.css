@@ -1,0 +1,51 @@
+.btn {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 1.28px;
+  padding: 12px 10px;
+  border-radius: var(--f-radius);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+}
+
+/* Primary CTA (White background by default, black text) */
+.btn-primary {
+  background-color: var(--f-color-ui-0);
+  color: var(--f-color-black);
+  border: 1px solid var(--f-color-bg-dark);
+}
+.btn-primary:hover {
+  background-color: #1EAEDB; /* Teal per spec */
+  color: var(--f-color-ui-0);
+  border-color: #1EAEDB;
+  opacity: 0.9;
+}
+
+/* Subscribe CTA - Reserve for MAXIMUM PRIORITY action */
+.btn-accent {
+  background-color: var(--f-color-accent-100);
+  color: var(--f-color-ui-0);
+  border: 1px solid var(--f-color-accent-100);
+}
+.btn-accent:hover {
+  background-color: var(--f-color-accent-90);
+  border-color: var(--f-color-accent-90);
+}
+
+/* Ghost Button */
+.btn-ghost {
+  background-color: transparent;
+  color: var(--f-color-black);
+  border: 1px solid var(--f-color-black);
+}
+.btn-ghost.dark-mode {
+    color: var(--f-color-ui-0);
+    border-color: var(--f-color-ui-0);
+}
+.btn-ghost:hover {
+  background-color: #1EAEDB;
+  color: var(--f-color-ui-0);
+  border-color: #1EAEDB;
+}
