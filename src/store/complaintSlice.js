@@ -14,6 +14,7 @@ const initialState = {
       createdAt: hoursAgo(50), // Should trigger critical!
       description: 'The washrooms on the 2nd floor of Block A have no running water since yesterday.',
       remarks: [],
+      isPublic: true,
       escalated: true,
       critical: true
     },
@@ -26,6 +27,7 @@ const initialState = {
       createdAt: hoursAgo(25), // Should trigger escalated
       description: 'Internet router is blinking red, no connection.',
       remarks: ['Technician assigned'],
+      isPublic: true,
       escalated: true,
       critical: false
     },
@@ -38,6 +40,7 @@ const initialState = {
       createdAt: hoursAgo(100),
       description: 'The AC blows warm air.',
       remarks: ['Gas refilled', 'Issue closed'],
+      isPublic: true,
       escalated: false,
       critical: false
     },
@@ -50,6 +53,7 @@ const initialState = {
       createdAt: hoursAgo(5),
       description: 'Huge pothole appeared after the rain.',
       remarks: [],
+      isPublic: true,
       escalated: false,
       critical: false
     }

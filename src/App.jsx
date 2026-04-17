@@ -12,6 +12,7 @@ import Register from './pages/Register/Register';
 
 // Layout
 import Header from './components/Header/Header';
+import PublicDashboard from './pages/Dashboard/PublicDashboard';
 
 function App() {
   const dispatch = useDispatch();
@@ -34,7 +35,7 @@ function App() {
         <Routes>
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
-          
+          <Route path="/public-dashboard" element={<PublicDashboard/>}/>
           {/* Protected Routes */}
           <Route path="/" element={isAuthenticated ? <Dashboard /> : <Navigate to="/login" />} />
           <Route path="/report" element={isAuthenticated ? <ReportIssue /> : <Navigate to="/login" />} />
