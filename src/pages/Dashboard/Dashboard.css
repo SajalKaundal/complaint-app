@@ -10,7 +10,7 @@
 }
 
 .dashboard-hero {
-  padding: 80px 40px;
+  padding: 30px 40px;
   display: flex;
   justify-content: center;
 }
@@ -135,13 +135,14 @@
   color: var(--f-color-black-60);
 }
 
-/* Auto Scrolling List */
+/* Auto Scrolling List (Carousel Mode) */
 .auto-scroll-section {
-  padding: 40px 40px; 
+  padding: 0; 
   flex-grow: 1;
   overflow: hidden; 
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .auto-scroll-container {
@@ -152,26 +153,61 @@
   max-width: 1280px;
   margin: 0 auto;
   /* Fading effect at top and bottom */
-  mask-image: linear-gradient(to bottom, transparent, black 5%, black 95%, transparent);
-  -webkit-mask-image: linear-gradient(to bottom, transparent, black 5%, black 95%, transparent);
+  mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
+  -webkit-mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
 }
 
 .auto-scroll-track {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  animation: scrollVertical 30s linear infinite;
+  height: 100%;
+  gap: 0;
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.auto-scroll-track:hover {
-  animation-play-state: paused;
-}
-
-.auto-scroll-track .complaint-card {
+.auto-scroll-track .complaint-card.large-card {
   width: 100%;
+  height: 100%;
+  flex-shrink: 0;
+  padding: 40px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 24px;
 }
 
-@keyframes scrollVertical {
-  0% { transform: translateY(0); }
-  100% { transform: translateY(-50%); } 
+.large-title {
+  font-size: 32px;
+  line-height: 1.2;
+}
+
+.carousel-controls {
+  position: absolute;
+  right: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 10;
+}
+
+.carousel-btn {
+  background: var(--f-color-ui-0);
+  border: 1px solid var(--f-color-ui-20);
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: all 0.2s;
+  color: var(--f-color-black);
+}
+
+.carousel-btn:hover {
+  background: var(--f-color-ui-10);
+  transform: scale(1.05);
 }
