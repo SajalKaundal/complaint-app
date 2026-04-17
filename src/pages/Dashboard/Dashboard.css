@@ -4,6 +4,11 @@
   min-height: calc(100vh - var(--header-height));
 }
 
+.dashboard-container.public-dashboard {
+  height: calc(100vh - var(--header-height));
+  overflow: hidden;
+}
+
 .dashboard-hero {
   padding: 80px 40px;
   display: flex;
@@ -128,4 +133,45 @@
 
 .id-tag {
   color: var(--f-color-black-60);
+}
+
+/* Auto Scrolling List */
+.auto-scroll-section {
+  padding: 40px 40px; 
+  flex-grow: 1;
+  overflow: hidden; 
+  display: flex;
+  flex-direction: column;
+}
+
+.auto-scroll-container {
+  flex-grow: 1;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  /* Fading effect at top and bottom */
+  mask-image: linear-gradient(to bottom, transparent, black 5%, black 95%, transparent);
+  -webkit-mask-image: linear-gradient(to bottom, transparent, black 5%, black 95%, transparent);
+}
+
+.auto-scroll-track {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  animation: scrollVertical 30s linear infinite;
+}
+
+.auto-scroll-track:hover {
+  animation-play-state: paused;
+}
+
+.auto-scroll-track .complaint-card {
+  width: 100%;
+}
+
+@keyframes scrollVertical {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-50%); } 
 }
